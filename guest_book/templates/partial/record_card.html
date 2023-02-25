@@ -1,0 +1,29 @@
+<div class="card-size card  card-shadow m-4">
+    <div class="card-header">
+        {% if header == 'records' %}
+            <div class="row g-o">
+                <div class="col-md-9 pt-2">
+                    <p class="card-text">{{ record.name }}({{ record.email }})</p>
+                </div>
+                <div class="col-md-1">
+                    <a class="" href="{% url 'record_update' record.id %}" role="button">
+                        <iconify-icon icon="material-symbols:edit-document-outline-sharp" style="color: #0B0C10;" width="40"></iconify-icon>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="" href="{% url 'record_delete' record.id %}">
+                        <iconify-icon icon="material-symbols:scan-delete-outline-sharp" style="color: #0B0C10;" width="40"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        {% elif header == 'record' %}
+            <p class="card-text">{{ record.name }}({{ record.email }})</p>
+        {% endif %}
+    </div>
+    <div class="card-body">
+        <div class="card-text">{{ record.text }}</div>
+    </div>
+</div>
+
+
+

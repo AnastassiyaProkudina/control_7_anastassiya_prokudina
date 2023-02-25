@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <div class="content-box">
+        <form action="{% url 'record_search' %}" method="post">
+            {% include 'partial/record_search_form.html'%}
+        </form>
+    </div>
+    <div class="content">
+        <div class="card-group">
+            {%  for record in records %}
+                {% include 'partial/record_card.html' with header='records' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
