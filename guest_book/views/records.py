@@ -24,7 +24,7 @@ def record_update(request, pk):
         form = GuestBookForm(request.POST or None, instance=record)
         if form.is_valid():
             record.save()
-            return redirect("record_detail", pk=record.pk)
+            return redirect("index")
     else:
         form = GuestBookForm(instance=record)
 
