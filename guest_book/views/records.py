@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+
 from guest_book.forms import GuestBookForm, SearchForm
 from guest_book.models import GuestBook, StatusChoice
 
@@ -13,7 +14,7 @@ def record_create(request):
         form = GuestBookForm()
     return render(
         request,
-        "record_create.html",
+        "index.html",
         context={"form": form},
     )
 
@@ -45,13 +46,15 @@ def record_confirm_delete(request, pk):
 
 
 def record_search(request):
-    records = GuestBook.objects.all().filter(
-        is_deleted=False, status=StatusChoice.ACTIVE
-    )
-    for record in records:
-        if request.method == "POST":
-            search_name = SearchForm(request.POST or None, instance=record.name)
-            records = GuestBook.objects.all().filter(
-                is_deleted=False, status=StatusChoice.ACTIVE, name=search_name
+    if request.method == "POST":
+        form = GuestBookForm()
+        form2 = SearchForm(request.POST)
+        if form2.is_valid():
+            name = form2.cleaned_data.get("name")
+            records = (
+                GuestBook.objects.all()
+                .filter(is_deleted=False, status=StatusChoice.ACTIVE, name=name)
+                .order_by("-created_at")
             )
-        return redirect("index", context={"records": records})
+            context = {"form": form, "records": records, "form2": form2}
+            return render(request, "index.html", context=context)

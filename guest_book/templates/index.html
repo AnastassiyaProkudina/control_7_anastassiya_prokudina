@@ -1,16 +1,29 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
+{% block menu %}
+    <li class="menu">
+        <div class="nav-form">
+            <form action="{% url 'record_search' %}" method="post">
+                {% include 'partial/record_search_form.html' %}
+            </form>
+        </div>
+    </li>
+{% endblock %}
 {% block content %}
-    <div class="content-box">
-        <form action="{% url 'record_search' %}" method="post">
-            {% include 'partial/record_search_form.html'%}
-        </form>
-    </div>
     <div class="content">
         <div class="card-group">
-            {%  for record in records %}
+            {% for record in records %}
                 {% include 'partial/record_card.html' with header='records' %}
             {% endfor %}
         </div>
+        <div class="form-box" style="margin-top: 4rem">
+            <h2>Добавить новую запись</h2>
+            <div class="form">
+                <form action="{% url 'record_create' %}" method="post">
+                    {% include 'partial/record_form.html' with button_text='Добавить' %}
+                </form>
+            </div>
+        </div>
     </div>
 {% endblock %}
+

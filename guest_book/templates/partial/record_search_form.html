@@ -1,5 +1,6 @@
-{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" class="btn btn-outline-light" style="color: inherit; border-color: #66FCF1;" value="Найти">
-
+<div class="search-form">
+    {% csrf_token %}
+    {{ form2.as_p }}
+    <input type="submit" class="btn-search" value="Найти">
+</div>
 

@@ -1,4 +1,5 @@
 from django.urls import path
+
 from guest_book.views.base import records_list
 from guest_book.views.records import *
 

@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
     <div class="content-box">
-        {% include 'partial/record_card.html' with header='record'%}
+        {% include 'partial/record_card.html' with header='record' %}
         <h2 class="delete-text">Are sure to delete this record?</h2>
         <form action="{% url 'record_confirm_delete' record.pk %}" method="post">
             {% csrf_token %}

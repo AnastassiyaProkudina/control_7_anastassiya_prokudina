@@ -1,4 +1,5 @@
 from django import forms
+
 from guest_book.models import GuestBook
 
 
@@ -16,4 +17,12 @@ class SearchForm(forms.ModelForm):
     class Meta:
         model = GuestBook
         fields = ["name"]
-        widgets = {"name": forms.TextInput(attrs={"placeholder": "Enter name"})}
+        widgets = {
+            "name": forms.TextInput(
+                attrs={
+                    "placeholder": "Enter name",
+                    "style": "border-color: #66FCF1; font-size: 16px; position: absolute;",
+                }
+            )
+        }
+        labels = {"name": ""}
