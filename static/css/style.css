@@ -1,15 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     background-color: #0B0C10 !important;
     box-sizing: border-box;
 }
+
 .container {
     margin: 0 auto;
     max-width: 1170px;
     z-index: 1;
 }
+
 .header {
     position: absolute;
     width: 100%;
@@ -17,12 +19,14 @@ body {
     list-style: none;
     z-index: 2;
 }
+
 .header_inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: inherit;
 }
+
 .header_logo {
     font-size: 38px;
     font-weight: bold;
@@ -30,6 +34,7 @@ body {
     background: inherit;
     text-decoration: none;
 }
+
 .menu {
     display: inline-block;
     padding: 8px 0 0 30px;
@@ -38,16 +43,19 @@ body {
     font-size: 18px;
     text-align: left;
 }
-.home{
+
+.home {
     display: inline-block;
     font-size: 22px;
     position: absolute;
     margin: 6px -2rem;
 }
-.search-text{
+
+.search-text {
     background-color: #C5C6C7;
     border: 1px solid #66FCF1;
 }
+
 .intro {
     display: flex;
     width: 100%;
@@ -62,6 +70,7 @@ body {
     justify-content: center;
     text-align: center;
 }
+
 .title_intro {
     font-size: 41px;
     font-weight: bold;
@@ -71,17 +80,20 @@ body {
     margin-bottom: 1rem;
     color: #45A29E;
 }
+
 .text_intro {
     font-size: 31px;
     font-weight: lighter;
     text-transform: uppercase;
     letter-spacing: 4px;
-    color: #C5C6C7 ;
+    color: #C5C6C7;
 }
-.card{
+
+.card {
     border-radius: 0 !important;
     text-align: left;
 }
+
 .content {
     display: flex;
     position: absolute;
@@ -90,42 +102,52 @@ body {
     flex-wrap: wrap;
     max-width: 1170px;
 }
+
 .card-body, .card-header, .card-footer, .card-description {
     background-color: #C5C6C7 !important;
     color: inherit;
 }
+
 .card-text {
     padding: 1rem 1rem;
     margin-top: -1rem;
 }
-.card-shadow{
+
+.card-shadow {
     box-shadow: 5px 5px 3px 0px rgba(105, 95, 95, 0.75);
     -webkit-box-shadow: 5px 5px 3px 0px rgba(138, 135, 135, 0.75);
     -moz-box-shadow: 5px 5px 3px 0px rgba(51, 50, 50, 0.75);
 }
-.card-size{
+
+.card-size {
     min-width: 28rem !important;
     max-width: 28rem;
 }
-.card-header{
+
+.card-header {
     background-color: #45A29E !important;
 }
-.card-body{
+
+.card-body {
     background-color: rgba(138, 135, 135, 0.75) !important;
 }
+
 .delete-text {
     margin-top: 40px;
-    color: #66FCF1  !important;
+    color: #66FCF1 !important;
 }
+
 .form-box {
     width: 500px;
     margin-left: 15rem !important;
     background-color: #305756;
     padding: 30px;
 }
-h2, .th-style{
+
+h2, .th-style {
     color: #0a3131;
 }
+
 .content-box {
     width: 700px;
     position: absolute;
@@ -133,13 +155,16 @@ h2, .th-style{
     text-align: center;
     display: inline-block;
 }
-td, .td-style{
+
+td, .td-style {
     color: #ffdfff !important;
 }
+
 .btn-delete {
     padding: 5px 42px !important;
     margin: 10px;
 }
+
 .btn-search {
     -webkit-border-radius: 11%;
     -moz-border-radius: 11%;
@@ -155,20 +180,22 @@ td, .td-style{
 }
 
 .btn-search:hover {
-  background: #0B0C10;
-  background-image: -webkit-linear-gradient(top, #0B0C10, #66FCF1);
-  background-image: -moz-linear-gradient(top, #0B0C10, #66FCF1);
-  background-image: -ms-linear-gradient(top, #0B0C10, #66FCF1);
-  background-image: -o-linear-gradient(top, #0B0C10, #66FCF1);
-  background-image: linear-gradient(to bottom, #0B0C10, #66FCF1);
-  text-decoration: none;
+    background: #0B0C10;
+    background-image: -webkit-linear-gradient(top, #0B0C10, #66FCF1);
+    background-image: -moz-linear-gradient(top, #0B0C10, #66FCF1);
+    background-image: -ms-linear-gradient(top, #0B0C10, #66FCF1);
+    background-image: -o-linear-gradient(top, #0B0C10, #66FCF1);
+    background-image: linear-gradient(to bottom, #0B0C10, #66FCF1);
+    text-decoration: none;
 }
-.search-form{
+
+.search-form {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
 }
-.nav-form{
+
+.nav-form {
     position: absolute;
-    margin-top: -35px;
+    margin-top: -25px;
 }

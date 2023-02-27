@@ -14,5 +14,4 @@ urlpatterns = [
         record_confirm_delete,
         name="record_confirm_delete",
     ),
-    path("record/search", record_search, name="record_search"),
 ]
